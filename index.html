@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sagar Bastola Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Navigation bar */
+    nav {
+      background-color: #35424a;
+      color: hsl(0, 9%, 7%);
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      margin: 20px auto;
+      max-width: 1500px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      border: 2px solid hsl(200, 7%, 92%);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      border: 2px solid #35424a;
+      background-color: hwb(70 82% 11%);
+      box-shadow: 0 4px 8px lab(44.36% 68.63 55.26 / 0.1);
+      border-radius: 10px;
+      padding: 10px 0;
+      margin: 20px auto;
+      max-width: 1200px;
+      width: 100%;
+      background-size: cover;
+
+    }
+    nav ul li {
+      margin: 0 15px;
+      padding: 10px 15px;
+      max-width: 1500px;
+      background-size: cover;
+      border-radius: 5px;
+      background-color: hwb(70 82% 11%);
+      box-shadow: 0 4px 8px hsla(0, 84%, 49%, 0.102);
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+    nav ul li a {
+      max-width: 1500px;
+      background-size: cover;
+      color: hwb(0 6% 93%);
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.2em;
+      text-shadow: 2px 2px 4px hwb(120 85% 9%);
+      border: 2px solid #35424a;
+      padding: 10px 15px;
+      border-radius: 5px;
+      background-color: hwb(70 82% 11%);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+    nav ul li a:hover {
+      max-width: 1500px;
+      background-size: cover;
+      text-decoration: underline;
+      background-color: #2a373f;
+      color: hsl(0, 12%, 7%);
+      border: 2px solid #35424a;
+      padding: 10px 15px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px hsla(0, 9%, 73%, 0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    /* Gallery hover effect */
+    .Box1 img, .additional-images img {
+      transition: transform 0.3s ease;
+      width: 200px;
+      height: 250px;
+      margin: 10px;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-evenly;
+      border-radius: 5px;
+      box-sizing: border-box;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      border: 2px solid #35424a;
+
+   }
+    .Box1 img:hover, .additional-images img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border: 2px solid #35424a;
+      padding: 10px 15px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px hsla(0, 9%, 73%, 0.1);
+      transition: background-color 0.3s ease;
+      background-color: #2a373f;
+      color: hsl(0, 12%, 7%);
+
+    }
+
+    /* box2 */
+    .Box2 img, .additional-images img {
+      transition: transform 0.3s ease;
+      width: 200px;
+      height: 250px;
+      margin: 10px;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-evenly;
+      border-radius: 5px;
+      box-sizing: border-box;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      border: 2px solid #35424a;
+   }
+    .Box2 img:hover, .additional-images img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border: 2px solid #35424a;
+      padding: 10px 15px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px hsla(0, 9%, 73%, 0.1);
+      transition: background-color 0.3s ease;
+      background-color: #2a373f;
+      color: hsl(0, 12%, 7%);
+
+    }
+
+    /* Back-to-top button */
+    #back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #35424a;
+      color: hwb(0 89% 6%);
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1em;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px #e9dede80;
+      border: 2px solid #35424a;
+    }
+    #back-to-top:hover {
+      background-color: #2a373f;
+      color: hwb(0 64% 31%);
+      border: 2px solid #35424a;
+      padding: 10px 15px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px hsla(0, 9%, 73%, 0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    /* Section styling */
+    section {
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: hwb(70 82% 11%);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 1200px;
+      margin: 20px auto;
+      color: hsl(0, 3%, 6%);
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: bold;
+      font-family: 'Courier New', Courier, monospace;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      border: 2px solid #35424a;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: lab(64.28% -61.59 47.2);
+      color: hsl(0, 3%, 6%);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+      background-image: url('image1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      filter: blur(0px);
+      backdrop-filter: blur(0px);
+      -webkit-backdrop-filter: blur(0px);
+      -webkit-filter: blur(0px);
+      -moz-backdrop-filter: blur(0px);
+      -moz-filter: blur(0px);
+      -o-backdrop-filter: blur(0px);
+      -o-filter: blur(0px);
+      -ms-backdrop-filter: blur(0px);
+      -ms-filter: blur(0px);
+      -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-image: url('data:image/jpeg;base64,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');
+    }
+
+    header {
+      background-color: #35424a;
+      color: hwb(69 84% 11%);
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 1200px;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+      font-family: 'Courier New', Courier, monospace;
+      text-shadow: 2px 2px 4px rgba(230, 227, 227, 0.5);
+      border: 2px solid #35424a;
+      background-image: url('image1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      filter: blur(0px);
+      backdrop-filter: blur(0px);
+      -webkit-backdrop-filter: blur(0px);
+      -webkit-filter: blur(0px);
+      -moz-backdrop-filter: blur(0px);
+      -moz-filter: blur(0px);
+      -o-backdrop-filter: blur(0px);
+      -o-filter: blur(0px);
+      -ms-backdrop-filter: blur(0px);
+      -ms-filter: blur(0px);
+      -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto;
+      width: 80%;
+      max-width: 800px;
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+      font-family: 'Courier New', Courier, monospace;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      border: 2px solid #35424a;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+      font-weight: bold;
+      color: hwb(0 94% 2%);
+      text-shadow: 2px 2px 4px #f3ebeb80;
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+      padding: 20px;
+      background-color: #35424a;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px lab(95.99% 0.67 0.22 / 0.102);
+      max-width: 1200px;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: bold;
+      font-family: 'Courier New', Courier, monospace;
+      text-shadow: 2px 2px 4px #f5ebeb80;
+      border: 2px solid hsl(206, 41%, 97%);
+    }
+
+    h2 {
+      color: hsl(210, 33%, 99%);
+      font-size: 2em;
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-family: 'Courier New', Courier, monospace;
+      text-shadow: 2px 2px 4px #f0e8e880;
+      text-align: center;
+      padding: 20px;
+      background-color: #35424a;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px hwb(0 92% 4%);
+      max-width: 1200px;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#Box1">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Sagar Bastola</h1>
+    <p>BCA Student at Pub Kamrup College | CGPA: 8.5</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm a passionate BCA student with experience in web development and programming. I love building projects and solving problems using tech.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>SQL</li>
+      <li>C++</li>
+      <li>Java</li>
+      <li>React</li>
+      <li>Node.js</li>
+    </ul>
+  </section>
+
+  <section id="Box1">
+    <h2>Keep Coding</h2>
+    <div class="Box1">
+      <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kaW5nfGVufDB8fDB8fHww">
+      <img src="https://images.unsplash.com/photo-1628258334105-2a0b3d6efee1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNvZGluZ3xlbnwwfHwwfHx8MA%3D%3D">
+      <img src="https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNvZGluZ3xlbnwwfHwwfHx8MA%3D%3D">
+      <img src="https://media.istockphoto.com/id/1355632594/photo/high-tech-startup-concept-innovative-male-software-engineer-standing-doing-big-data-analysis.webp?a=1&b=1&s=612x612&w=0&k=20&c=h4FtvF5Dnj3kh-GHDX72J92shR6lxlHEHcGHibUYioI=">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><strong>Phone:</strong> 8131948181</p>
+    <p><strong>Email:</strong> <a href="mailto:sagarbastolasagar3@gmail.com">sagarbastolasagar3@gmail.com</a></p>
+    <p><strong>Address:</strong> India, Assam (Attareekhat Khoiragrant)</p>
+  </section>
+
+  <section id="Box2">
+    <h2>Be the Top Coder</h2>
+    <div class="Box2">
+      <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNvZGluZ3xlbnwwfHwwfHx8MA%3D%3D">
+      <img src="https://images.unsplash.com/photo-1607706189992-eae578626c86?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y29kaW5nfGVufDB8fDB8fHww">
+      <img src="https://images.unsplash.com/photo-1607705703571-c5a8695f18f6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNvZGluZ3xlbnwwfHwwfHx8MA%3D%3D">
+      <img src="https://images.unsplash.com/photo-1562813733-b31f71025d54?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGNvZGluZ3xlbnwwfHwwfHx8MA%3D%3D">
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sagar Bastola</p>
+  </footer>
+
+  <button id="back-to-top">Top</button>
+
+  <script>
+    // Show back-to-top button on scroll
+    const backToTopButton = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        backToTopButton.style.display = 'block';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    });
+
+    // Scroll to top functionality
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
